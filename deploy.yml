@@ -1,0 +1,8 @@
+---
+  hosts: all
+  become: true
+  tasks:
+    - name: copy war onto tomcat server
+      copy:
+       src: /home/ansible/work01/mahendra/target/mahendra.war
+       dest: /opt/apache-tomcat-8.5.32/webapss
